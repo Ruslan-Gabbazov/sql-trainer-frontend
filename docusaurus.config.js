@@ -13,15 +13,15 @@ const config = {
   favicon: "img/favicon.ico",
 
   // Set the production url of your site here
-  url: "http://kaisqltrainer.ru",
+  url: "https://Ruslan-Gabbazov.github.io",
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
-  baseUrl: "/",
+  baseUrl: "/sql-trainer-frontend/",
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
-  organizationName: "4297 group", // Usually your GitHub org/user name.
-  projectName: "sql-trainer", // Usually your repo name.
+  organizationName: "Ruslan-Gabbazov", // Usually your GitHub org/user name.
+  projectName: "sql-trainer-frontend", // Usually your repo name.
 
   onBrokenLinks: "throw",
   onBrokenMarkdownLinks: "warn",
