@@ -79,6 +79,9 @@ const config = {
         // ... Your options.
         // `hashed` is recommended as long-term-cache of index file is possible.
         hashed: true,
+        searchResultLimits: 12,
+        highlightSearchTermsOnTargetPage: true,
+        searchBarShortcutHint: false,
         language: ["ru", "en"],
         // ```
       }),
@@ -90,7 +93,7 @@ const config = {
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
       // Replace with your project's social card
-      image: "img/docusaurus-social-card.jpg",
+      image: "img/logo.png",
       navbar: {
         title: "Тренажёр SQL",
         logo: {
@@ -98,8 +101,8 @@ const config = {
           src: "img/logo.png",
         },
         items: [
-          { type: "docSidebar", sidebarId: "lecturesSidebar", position: "left", label: "Лекции" },
-          { type: "docSidebar", sidebarId: "labsSidebar", label: "Лабораторные", position: "left" },
+          { to: "/docs/lectures", type: "docSidebar", sidebarId: "lecturesSidebar", position: "left", label: "Лекции" },
+          { to: "/docs/labs", type: "docSidebar", sidebarId: "labsSidebar", label: "Лабораторные", position: "left" },
           { to: "/sandbox-one", label: "Песочница", position: "left" },
           // {
           //   href: 'https://github.com/facebook/docusaurus',

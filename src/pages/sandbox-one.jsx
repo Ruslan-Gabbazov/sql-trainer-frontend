@@ -5,6 +5,7 @@ export default function SandboxOne() {
   return (
     <Layout>
       <iframe
+        id="sandbox-one"
         src="https://onecompiler.com/postgresql"
         title="onecompiler"
         width="100%"
