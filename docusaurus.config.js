@@ -20,7 +20,7 @@ const config = {
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
-  organizationName: "Ruslan-Gabbazov", // Usually your GitHub org/user name.
+  organizationName: "Ruslan-Gabbazov", // Usually your GitHub org/username.
   projectName: "sql-trainer-frontend", // Usually your repo name.
 
   trailingSlash: true,
@@ -43,26 +43,7 @@ const config = {
       ({
         docs: {
           sidebarPath: "./sidebars.js",
-          // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
-          // editUrl:
-          //   'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
         },
-        // blog: {
-        //   showReadingTime: true,
-        //   feedOptions: {
-        //     type: ['rss', 'atom'],
-        //     xslt: true,
-        //   },
-        //   // Please change this to your repo.
-        //   // Remove this to remove the "edit this page" links.
-        //   // editUrl:
-        //   //   'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
-        //   // Useful options to enforce blogging best practices
-        //   onInlineTags: 'warn',
-        //   onInlineAuthors: 'warn',
-        //   onUntruncatedBlogPosts: 'warn',
-        // },
         theme: {
           customCss: "./src/css/custom.css",
         },
@@ -88,7 +69,6 @@ const config = {
     ],
   ],
 
-
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
@@ -105,7 +85,7 @@ const config = {
           { to: "/docs/labs", type: "docSidebar", sidebarId: "labsSidebar", label: "Лабораторные", position: "left" },
           { to: "/sandbox-one", label: "Песочница", position: "left" },
           // {
-          //   href: 'https://github.com/facebook/docusaurus',
+          //   href: 'https://github.com/Ruslan-Gabbazov/sql-trainer-frontend',
           //   label: 'GitHub',
           //   position: 'right',
           // },
@@ -117,51 +97,39 @@ const config = {
           // autoCollapseCategories: true,
         },
       },
-      // footer: {
-      //   style: 'dark',
-      //   links: [
-      //     {
-      //       title: 'Docs',
-      //       items: [
-      //         {
-      //           label: 'Tutorial',
-      //           to: '/docs/intro',
-      //         },
-      //       ],
-      //     },
-      //     {
-      //       title: 'Community',
-      //       items: [
-      //         {
-      //           label: 'Stack Overflow',
-      //           href: 'https://stackoverflow.com/questions/tagged/docusaurus',
-      //         },
-      //         {
-      //           label: 'Discord',
-      //           href: 'https://discordapp.com/invite/docusaurus',
-      //         },
-      //         {
-      //           label: 'Twitter',
-      //           href: 'https://twitter.com/docusaurus',
-      //         },
-      //       ],
-      //     },
-      //     {
-      //       title: 'More',
-      //       items: [
-      //         {
-      //           label: 'Blog',
-      //           to: '/blog',
-      //         },
-      //         {
-      //           label: 'GitHub',
-      //           href: 'https://github.com/facebook/docusaurus',
-      //         },
-      //       ],
-      //     },
-      //   ],
-      //   copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
-      // },
+      metadata: [
+        { name: "description", content: "Tренажёр SQL и учебник PostgreSQL" },
+        { name: "keywords", content: "КАИ, КНИТУ-КАИ, SQL, Тренажёр SQL, Песочница SQL, Базы данных, БД, " },
+        { name: "language", content: "ru" },
+        { name: "og:title", content: "Tренажёр SQL" },
+        { name: "og:description", content: "Тренажёр и учебник PostgreSQL для изучения SQL." },
+        { name: "og:type", content: "website" },
+        { name: "og:url", content: "https://ruslan-gabbazov.github.io/sql-trainer-frontend/" },
+        { name: "og:image", content: "https://ruslan-gabbazov.github.io/sql-trainer-frontend/img/logo.svg" },
+      ],
+      headTags: [
+        {
+          tagName: "link",
+          attributes: {
+            rel: "preconnect",
+            href: "https://github.com",
+          },
+        },
+        {
+          tagName: "script",
+          attributes: {
+            type: "application/ld+json",
+          },
+          innerHTML: JSON.stringify({
+            "@context": "https://schema.org/",
+            "@type": "Y4:0",
+            name: "Tренажёр SQL",
+            description: "Тренажёр и учебник PostgreSQL для изучения SQL.",
+            url: "https://ruslan-gabbazov.github.io/sql-trainer-frontend/",
+            logo: "https://ruslan-gabbazov.github.io/sql-trainer-frontend/img/logo.svg",
+          }),
+        },
+      ],
       prism: {
         theme: prismThemes.github,
         darkTheme: prismThemes.dracula,
